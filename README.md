@@ -45,3 +45,26 @@ To run this project, you will need to have [Go](https://golang.org/dl/) installe
 ```bash
 git clone [https://github.com/AliIbrahi1242003/App-client-server.git](https://github.com/AliIbrahi1242003/App-client-server.git)
 cd App-client-server
+
+2. Run the Server
+Open a terminal and run the following command to start the server:
+go run server.go
+
+You should see the output: Chat Server is running on port 1234...
+3. Run the Client
+Open a new terminal (or multiple new terminals to simulate multiple users):
+go run client.go
+
+You should see the output: Connected to chat server.
+4. Start Chatting!
+ * Type any message in a client terminal and press Enter.
+ * The message will be sent to the server, and the full chat history (including your new message) will be printed.
+ * Go to another client terminal and send a message. You will see the history from all clients.
+ * To disconnect a client, type exit and press Enter.
+🧠 Key Concepts Implemented
+This assignment demonstrates several key concepts from the Distributed Systems course:
+ * Remote Procedure Call (RPC): Abstracting the client-server network communication into a simple function call (client.Call("ChatService.SendMessage", ...)).
+ * Client-Server Architecture: A clear separation of concerns between the server (which holds the state/data) and the clients (which provide the user interface).
+ * Concurrency: The server handles multiple clients simultaneously by launching a new goroutine for each accepted connection.
+ * State Synchronization & Thread Safety: Using a Mutex to protect the shared chatHistory slice, ensuring that only one goroutine can modify it at a time, preventing data corruption.
+<!-- end list -->
