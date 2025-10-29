@@ -61,10 +61,16 @@ You should see the output: Connected to chat server.
  * The message will be sent to the server, and the full chat history (including your new message) will be printed.
  * Go to another client terminal and send a message. You will see the history from all clients.
  * To disconnect a client, type exit and press Enter.
-🧠 Key Concepts Implemented
-This assignment demonstrates several key concepts from the Distributed Systems course:
- * Remote Procedure Call (RPC): Abstracting the client-server network communication into a simple function call (client.Call("ChatService.SendMessage", ...)).
- * Client-Server Architecture: A clear separation of concerns between the server (which holds the state/data) and the clients (which provide the user interface).
- * Concurrency: The server handles multiple clients simultaneously by launching a new goroutine for each accepted connection.
- * State Synchronization & Thread Safety: Using a Mutex to protect the shared chatHistory slice, ensuring that only one goroutine can modify it at a time, preventing data corruption.
-<!-- end list -->
+```
+
+---
+
+## Installation Instructions
+
+1. Ensure you have Go installed on your machine. You can download it from [Go Downloads](https://golang.org/dl/).
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/AliIbrahi1242003/App-client-server.git
+   cd App-client-server
+   ```
+3. Install any necessary dependencies (if applicable).
