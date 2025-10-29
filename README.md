@@ -40,28 +40,31 @@ As required by the assignment instructions, here is a screen recording of the ap
 
 To run this project, you will need to have [Go](https://golang.org/dl/) installed on your machine.
 
-### 1. Clone the Repository
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/AliIbrahi1242003/App-client-server.git
+   cd App-client-server
+   ```
 
-```bash
-git clone [https://github.com/AliIbrahi1242003/App-client-server.git](https://github.com/AliIbrahi1242003/App-client-server.git)
-cd App-client-server
+2. **Run the Server**
+   Open a terminal and run the following command to start the server:
+   ```bash
+   go run server.go
+   ```
+   You should see the output: `Chat Server is running on port 1234...`
 
-2. Run the Server
-Open a terminal and run the following command to start the server:
-go run server.go
+3. **Run the Client**
+   Open a new terminal (or multiple new terminals to simulate multiple users) and run:
+   ```bash
+   go run client.go
+   ```
+   You should see the output: `Connected to chat server.`
 
-You should see the output: Chat Server is running on port 1234...
-3. Run the Client
-Open a new terminal (or multiple new terminals to simulate multiple users):
-go run client.go
-
-You should see the output: Connected to chat server.
-4. Start Chatting!
- * Type any message in a client terminal and press Enter.
- * The message will be sent to the server, and the full chat history (including your new message) will be printed.
- * Go to another client terminal and send a message. You will see the history from all clients.
- * To disconnect a client, type exit and press Enter.
-```
+4. **Start Chatting!**
+   - Type any message in a client terminal and press Enter.
+   - The message will be sent to the server, and the full chat history (including your new message) will be printed.
+   - Go to another client terminal and send a message. You will see the history from all clients.
+   - To disconnect a client, type `exit` and press Enter.
 
 ---
 
